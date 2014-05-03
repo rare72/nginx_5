@@ -15,3 +15,4 @@ Apply this module by issueing the following command:
 wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx5_install.sh -O /tmp/nginx5_install.sh
 cd /tmp
 nginx_install.sh
+
