@@ -13,7 +13,7 @@ package { 'nginx':
 # 3. Copy my configuration files via wget then source them to the proper location
 # 3a. myconfig_1 /etc/nginx/nginx.conf
 exec{'webconfig_1':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/nginx.conf -O /etc/nginx/nginx.conf",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx.conf -O /etc/nginx/nginx.conf",
  }
 
 file{'/etc/nginx/nginx.conf':
@@ -25,7 +25,7 @@ file{'/etc/nginx/nginx.conf':
 
 # 3b. myconfig_2 /etc/nginx/sites-available/default
 exec{'webconfig_2':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/default -O /etc/nginx/sites-available/default",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/default -O /etc/nginx/sites-available/default",
  }
 
 file{'/etc/nginx/sites-available/default':
@@ -37,7 +37,7 @@ file{'/etc/nginx/sites-available/default':
 
 # 3c. myconfig_3 /etc/nginx/conf.d/puptest.conf 
 exec{'webconfig_3':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/puptest.conf -O /etc/nginx/conf.d/puptest.conf",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/puptest.conf -O /etc/nginx/conf.d/puptest.conf",
  }
 
 file{'/etc/nginx/conf.d/puptest.conf':
@@ -59,7 +59,7 @@ file{'/usr/share/nginx/www/index.html':
    group  => "root",
  }  
 
-# 5a. Ensure the NGINX daemon is running
+# 5. Ensure the NGINX daemon is running
 service { "nginx":   
    ensure => running,
    enable  => true,
