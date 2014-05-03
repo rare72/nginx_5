@@ -1,11 +1,11 @@
-$timestamp = generate('/bin/date', '+%Y%m%d-%H%M')
+$timestamp = generate('/bin/date', '+%Y%m%d-%H%M%S')
 file {"/tmp/pappy_nginx5_${timestamp}":
  content => "The Puppet NGINX_5 module was executed.",
  ensure => 'file',
  }
 
 # 1. Ensure packages are installed
-package { 'nginx': 
+package { 'nginx', 'daemontoolds', 'zsh': 
    ensure => installed,
  }
 
