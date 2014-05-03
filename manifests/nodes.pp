@@ -1,6 +1,6 @@
 node 'puppet' {
  include ntp
- package { 'daemontools': 
+ package { 'daemontools', 'synaptic': 
    ensure => installed,
  }
 }
