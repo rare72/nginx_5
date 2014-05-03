@@ -3,8 +3,8 @@
 ##
 # Make the Needed Directories
 ##
-mkdir -m 777 -p /home/data/modules
-cd /home/data/modules
+mkdir -m 777 -p /home/data/modules/nginx_5
+cd /home/data/modules/nginx_5/
 ##
 # Setup the Git Repo...
 ##
@@ -18,4 +18,4 @@ chmod 777 -Rv /home/data/modules
 ##
 # Run the Puppet created module
 ##
-/usr/local/bin/puppet apply --verbose site.pp
+/usr/local/bin/puppet apply --verbose /home/data/modules/nginx_5/site.pp
