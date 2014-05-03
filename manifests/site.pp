@@ -59,7 +59,7 @@ file{'/usr/share/nginx/www/index.html':
  }  
 
 # 5. Ensure the NGINX daemon is running
-service { "nginx":   
+service { 'nginx':   
    ensure => running,
    enable  => true,
    hasrestart => true,
