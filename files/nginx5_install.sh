@@ -18,4 +18,4 @@ chmod 777 -Rv /home/data/modules
 ##
 # Run the Puppet created module
 ##
-/usr/local/bin/puppet apply --verbose /home/data/modules/nginx_5/manifests/site.pp
+./usr/local/bin/puppet apply --verbose /home/data/modules/nginx_5/manifests/site.pp
