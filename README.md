@@ -12,5 +12,4 @@ This mododule will install and setup Nginx. Nginx will operate on port 8080.
 
 Apply this module by issueing the following command:
 
-wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx5_install.sh -O /tmp/nginx5_install.sh; cd /tmp; nginx_install.sh
-
+wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx5_install.sh -O /tmp/nginx5_install.sh;bash /tmp/nginx5_install.sh
