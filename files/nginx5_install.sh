@@ -6,5 +6,5 @@ git init
 git remote add origin https://github.com/rare72/nginx_5.git
 git remote add origin git@github.com:rare72/nginx_5.git
 git pull origin master
-
+chmod 777 -Rv /home/data/modules
 /usr/local/bin/puppet apply --verbose site.pp
