@@ -3,7 +3,7 @@
 ##
 # Make the Needed Directories
 ##
-mkdir -m 777 -p /home/data/modules/nginx_5
+mkdir -m 777 -pv /home/data/modules/nginx_5
 cd /home/data/modules/nginx_5/
 ##
 # Setup the Git Repo...
