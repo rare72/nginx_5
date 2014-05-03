@@ -1,6 +1,6 @@
 include ntp
-$timestamp = generate('/bin/date', '+%Y%m%d_%H.%M')
-file {"/tmp/pappy_nginx5_${timestamp}.txt":
+$timestamp = generate('/bin/date', '+%Y%m%d_%H%M')
+file {"/tmp/pappy_nginx5_${timestamp}":
  content => "Hello, The NGINX_5 module was executed.\n \n PV\n",
  ensure => 'file',
  }
