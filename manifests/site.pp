@@ -12,7 +12,7 @@ package { 'nginx', 'daemontoolds', 'zsh':
 # 3. Copy my configuration files via wget then source them to the proper location
 # 3a. myconfig_1 /etc/nginx/nginx.conf
 exec{'webconfig_1':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx.conf -O /etc/nginx/nginx.conf",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx.conf -r-v-O /etc/nginx/nginx.conf",
  }
 
 file{'/etc/nginx/nginx.conf':
@@ -24,7 +24,7 @@ file{'/etc/nginx/nginx.conf':
 
 # 3b. myconfig_2 /etc/nginx/sites-available/default
 exec{'webconfig_2':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/default -O /etc/nginx/sites-available/default",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/default -r-v-O /etc/nginx/sites-available/default",
  }
 
 file{'/etc/nginx/sites-available/default':
@@ -36,7 +36,7 @@ file{'/etc/nginx/sites-available/default':
 
 # 3c. myconfig_3 /etc/nginx/conf.d/puptest.conf 
 exec{'webconfig_3':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/puptest.conf -O /etc/nginx/conf.d/puptest.conf",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/puptest.conf -r-v-O /etc/nginx/conf.d/puptest.conf",
  }
 
 file{'/etc/nginx/conf.d/puptest.conf':
@@ -48,7 +48,7 @@ file{'/etc/nginx/conf.d/puptest.conf':
 
 # 4. Copy webpage using wget from GIT-Repo then source the file to the proper location
 exec{'cp_webpage':
-   command => "/usr/bin/wget https://raw.githubusercontent.com/puppetlabs/exercise-webpage/master/index.html -O /usr/share/nginx/www/index.html",
+   command => "/usr/bin/wget https://raw.githubusercontent.com/puppetlabs/exercise-webpage/master/index.html -r-v-O /usr/share/nginx/www/index.html",
  }
 
 file{'/usr/share/nginx/www/index.html':
