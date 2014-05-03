@@ -1,5 +1,5 @@
 include ntp
-$timestamp = generate('/bin/date', '+%Y%m%d-%h%M')
+$timestamp = generate('/bin/date', '+%F-%H%M')
 file {"/tmp/papply_task_${timestamp}":
  content => "Hello, The NGINX_5 module has started.\n \n PV\n",
  ensure => 'file',
