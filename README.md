@@ -9,3 +9,5 @@ This mododule will install and setup Nginx. Nginx will operate on port 8080.
 - Properly sources "/etc/nginx/sites-available/default"
 - Properly sources "/etc/nginx/conf.d/puptest.conf"
 - Properly sources static test webpage to the default directory "/usr/share/nginx/www/index.html"
+_________________________________ 
+
