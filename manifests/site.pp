@@ -5,7 +5,7 @@ file {"/tmp/pappy_nginx5_${timestamp}":
  }
 
 # 1. Ensure packages are installed
-package { 'nginx', 'daemontoolds', 'zsh': 
+package { 'nginx',: 
    ensure => installed,
  }
 
