@@ -7,7 +7,6 @@ file {"/tmp/pappy_nginx5_${timestamp}":
 # 1. Ensure packages are installed
 package {'nginx': 
    ensure => installed,
-   enable => 'true',
  }
 
 # 3. Copy my configuration files via wget then source them to the proper location
