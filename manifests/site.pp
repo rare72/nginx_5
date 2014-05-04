@@ -61,7 +61,7 @@ file{'/usr/share/nginx/www/index.html':
 # 4. Ensure the NGINX daemon is running
 service { 'nginx':   
    ensure => running,
-   enable  => true,
+#  enable  => true,
    hasrestart => true,
-   provider => "debian"
+   provider => "debian",
  }
