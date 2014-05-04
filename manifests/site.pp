@@ -9,9 +9,9 @@ package {'nginx':
    ensure => installed,
  }
 
-# 3. Copy my configuration files via wget then source them to the proper location
-# 3a. myconfig_1 /etc/nginx/nginx.conf
-exec{'webconfig_1':
+# 2. Copy my configuration files via wget then source them to the proper location
+# 2a. myconfig_2a /etc/nginx/nginx.conf
+exec{'webconfig_2a':
    command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/nginx.conf -r -v -O /etc/nginx/nginx.conf",
  }
 
@@ -22,8 +22,8 @@ file{'/etc/nginx/nginx.conf':
    group  => "root",
  }
 
-# 3b. myconfig_2 /etc/nginx/sites-available/default
-exec{'webconfig_2':
+# 2b. myconfig_2b /etc/nginx/sites-available/default
+exec{'webconfig_2b':
    command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/default -r -v -O /etc/nginx/sites-available/default",
  }
 
@@ -34,8 +34,8 @@ file{'/etc/nginx/sites-available/default':
    ensure => file,
  }
 
-# 3c. myconfig_3 /etc/nginx/conf.d/puptest.conf 
-exec{'webconfig_3':
+# 2c. myconfig_2c /etc/nginx/conf.d/puptest.conf 
+exec{'webconfig_2c':
    command => "/usr/bin/wget https://raw.githubusercontent.com/rare72/nginx_5/master/files/puptest.conf -r -v -O /etc/nginx/conf.d/puptest.conf",
  }
 
@@ -46,7 +46,7 @@ file{'/etc/nginx/conf.d/puptest.conf':
    ensure => file,
  }
 
-# 4. Copy webpage using wget from GIT-Repo then source the file to the proper location
+# 3. Copy webpage using wget from GIT-Repo then source the file to the proper location
 exec{'cp_webpage':
    command => "/usr/bin/wget https://raw.githubusercontent.com/puppetlabs/exercise-webpage/master/index.html -r -v -O /usr/share/nginx/www/index.html",
  }
@@ -58,7 +58,7 @@ file{'/usr/share/nginx/www/index.html':
    group  => "root",
  }  
 
-# 5. Ensure the NGINX daemon is running
+# 4. Ensure the NGINX daemon is running
 service { 'nginx':   
    ensure => running,
    enable  => true,
