@@ -3,18 +3,16 @@
 ##
 # Make the Needed Directories
 ##
-mkdir -m 777 -pv /home/data/modules/nginx_5
-cd /home/data/modules/nginx_5/
+mkdir -m 755 -pv /home/data/modules/
+cd /home/data/modules/
 ##
-# Setup the Git Repo...
+# Clone the Git Repo. for local use
 ##
-git init
-git remote add origin https://github.com/rare72/nginx_5.git
-git pull origin master
+git clone https://github.com/rare72/nginx_5.git
 ##
 # Apply permission to the repository file (Who knows how you will apply these files to the system)
 ##
-chmod 777 -Rv /home/data/modules
+chmod 755 -Rv /home/data/modules
 ##
 # Run the Puppet created module
 ##
