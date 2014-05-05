@@ -14,8 +14,6 @@
 server {
 	listen   8080;
 
-        server_name puppet;
-
 	root /usr/share/nginx/www;
 	index index.html index.htm;
 
